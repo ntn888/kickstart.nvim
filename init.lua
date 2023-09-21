@@ -535,6 +535,8 @@ cmp.setup {
     { name = 'luasnip' },
   },
 }
-
+vim.opt.tabstop = 4 -- Always 8 (see :h tabstop)
+vim.opt.shiftwidth = 4 -- What you expecting
+vim.opt.expandtab = true -- Works without this
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
