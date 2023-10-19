@@ -165,16 +165,16 @@ require('lazy').setup({
     },
   },
 
-  {
-    -- Add indentation guides even on blank lines
-    'lukas-reineke/indent-blankline.nvim',
-    -- Enable `lukas-reineke/indent-blankline.nvim`
-    -- See `:help indent_blankline.txt`
-    opts = {
-      char = '┊',
-      show_trailing_blankline_indent = false,
-    },
-  },
+--  {
+--    -- Add indentation guides even on blank lines
+--    'lukas-reineke/indent-blankline.nvim',
+--    -- Enable `lukas-reineke/indent-blankline.nvim`
+--    -- See `:help indent_blankline.txt`
+--    opts = {
+--      char = '┊',
+--      show_trailing_blankline_indent = false,
+--    },
+--  },
 
   -- "gc" to comment visual regions/lines
   { 'numToStr/Comment.nvim', opts = {} },
@@ -221,7 +221,7 @@ require('lazy').setup({
   --    Uncomment the following line and add your plugins to `lua/custom/plugins/*.lua` to get going.
   --
   --    For additional information see: https://github.com/folke/lazy.nvim#-structuring-your-plugins
-  -- { import = 'custom.plugins' },
+  { import = 'custom.plugins' },
 }, {})
 
 -- [[ Setting options ]]
@@ -450,10 +450,10 @@ local servers = {
   -- clangd = {},
   -- gopls = {},
   -- pyright = {},
-  -- rust_analyzer = {},
-  phpactor = {},
-  tsserver = {},
-  html = { filetypes = { 'html', 'twig', 'hbs'} },
+  rust_analyzer = {},
+  --phpactor = {},
+  --tsserver = {},
+  --html = { filetypes = { 'html', 'twig', 'hbs'} },
 
   lua_ls = {
     Lua = {
