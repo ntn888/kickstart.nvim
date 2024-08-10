@@ -447,7 +447,7 @@ end
 --  If you want to override the default filetypes that your language server will attach to you can
 --  define the property 'filetypes' to the map in question.
 local servers = {
-  -- clangd = {},
+  clangd = {},
   -- gopls = {},
   -- pyright = {},
   rust_analyzer = {},
@@ -540,3 +540,9 @@ vim.opt.shiftwidth = 4 -- What you expecting
 vim.opt.expandtab = true -- Works without this
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
+local lspconfig = require('lspconfig')
+lspconfig.clangd.setup({
+  name = 'clangd',
+  cmd = {'clangd', '--background-index', '--clang-tidy', '--log=verbose', '--query-driver=/usr/bin/arm-none-eabi-gcc,/usr/bin/arm-none-eabi-g++'},
+})
+
